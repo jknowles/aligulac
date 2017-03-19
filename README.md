@@ -1,3 +1,30 @@
+# My dumb modifications
+
+**R Connection String**
+
+````
+
+con <- dbConnect(drv, dbname = "", host = "guest IP from ifconfig", 
+                  port = 5432, user="", password = "")
+
+````
+
+**Docker String**
+
+````
+docker run --name CONTAINERNAME -e POSTGRES_PASSWORD=passwd -e POSTGRES_DB=aligulac -e PSOTGRES_USER=USER -p 5432:5432 postgres
+````
+
+**Restore string?**
+
+````
+cat aligulac.sql | docker exec -i aligulac psql -U postgres
+
+````
+
+       
+
+
 # Contributor's guide to Aligulac.com
 
 ## Overview
