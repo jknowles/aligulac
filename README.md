@@ -6,7 +6,8 @@
 
 con <- dbConnect(drv, dbname = "", host = "guest IP from ifconfig", 
                   port = 5432, user="", password = "")
-
+dbSendStatement(con, "CREATE ROLE aligulac WITH SUPERUSER")
+dbSendStatement(con, "CREATE ROLE auth_user")
 ````
 
 **Docker String**
